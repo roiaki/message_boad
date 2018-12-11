@@ -50,6 +50,8 @@ public class IndexServlet extends HttpServlet {
 	        page = Integer.parseInt(request.getParameter("page"));
 	    } catch(NumberFormatException e) {}
 
+	    //何件目から取得するか　setFirstResult(15 * (1 - 1))　0件目から15件　（0~14のデータ）
+	    //setMaxResults 何件取得するか
 	    List<Message> messages = em.createNamedQuery("getAllMessages", Message.class)
                 .setFirstResult(15 * (page - 1))
                 .setMaxResults(15)

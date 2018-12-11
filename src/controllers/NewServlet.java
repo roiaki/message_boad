@@ -34,6 +34,7 @@ public class NewServlet extends HttpServlet {
         //        EntityManager em = DBUtil.createEntityManager();
         //        em.getTransaction().begin();
         //
+    	//
         //        Message m = new Message();
         //
         //        String title = "taro";
@@ -53,7 +54,7 @@ public class NewServlet extends HttpServlet {
         //        response.getWriter().append(Integer.valueOf(m.getId()).toString());
         //
         //        em.close();
-        
+
         //セッションIDをセット
         request.setAttribute("_token", request.getSession().getId());
         request.setAttribute("message", new Message());
